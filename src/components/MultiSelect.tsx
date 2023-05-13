@@ -2,11 +2,11 @@ import React from 'react'
 import Select from 'react-select'
 import { alllanguages } from '../config'
 
-const allOptions: { value: number; label: string }[] = []
-alllanguages.map((val, ind) => allOptions.push({ value: ind, label: val }))
 export interface MultiSelectProps {}
 
 export const MultiSelect: React.FC<MultiSelectProps> = () => {
+  const allOptions: { value: number; label: string }[] = []
+  alllanguages.map((val, ind) => allOptions.push({ value: ind, label: val }))
   const selectStyles = {
     control: (base: any) => ({
       ...base,
